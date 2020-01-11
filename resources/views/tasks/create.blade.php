@@ -2,6 +2,8 @@
 
 @section('content')
     
+    @include('commons.error_messages')
+    
     <h1>タスク新規追加ページ</h1>
     
     <div class="row">
@@ -10,6 +12,11 @@
                 <div class="form-group">
                     {!! Form::label('content','タスク：')!!}
                     {!! Form::text('content', null, ['class'=>'form-control'])!!}
+                </div>
+                
+                <div class="form-group">
+                    {!! Form::label('status','ステータス：')!!}
+                    {!! Form::text('status', null, ['class'=>'form-control'])!!}
                 </div>
                 
                 {!! Form::submit('追加', ['class'=>'btn btn-primary'])!!}

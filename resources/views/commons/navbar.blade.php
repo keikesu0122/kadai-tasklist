@@ -12,8 +12,8 @@
                     @if(Auth::check())
                         <li class="nav-item">{!! link_to_route('tasks.create', '新規タスクの追加',[], ['class'=> 'nav-link']) !!}</li>
                     @else
-                        <li class="nav-item">{!! link_to_route /*signup*/ !!}</li>
-                        <li class="nav-item">{!! link_to_route /*login*/ !!}</li>
+                        <li class="nav-item">{!! link_to_route('signup.get', 'Signup', [], ['class' => 'nav-link']) !!}</li>
+                        <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
                     @endif
                 </ul>
             </div>
